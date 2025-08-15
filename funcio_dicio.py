@@ -35,14 +35,14 @@ def chamar():
 def media_salal():
     soma_salal = 0
     for funcionario in funcionarios:
-         for chave in funcionarios.keys():
-              soma_salal += {funcionario[chave]['salario']}
+         for chave in funcionario.keys():
+              soma_salal += funcionario[chave]['salario']
     print(f'média salarial: {soma_salal/len(funcionarios)}')
 
 def mais_5k():
      for f in funcionarios:
-          for valor in f.items():
-               if {valor['salario']} > 5000.00:
+          for chave, valor in f.items():
+               if valor['salario'] > 5000.00:
                     print(f"nome: {valor['nome']}")
 
      
